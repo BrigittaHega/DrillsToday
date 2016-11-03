@@ -9,6 +9,7 @@ class Author
 		string email;
 		char gender;
 	public:
+		Author();
 		Author(string, string, char);
 		//Accessor
 		string getName();
@@ -19,6 +20,10 @@ class Author
 	//	virtual  const string toString();
 		string toString();		
 };
+	Author::Author ()
+	{
+	
+	};
 
 	Author::Author (string nameList, string emailList, char gen)
 	{
@@ -45,16 +50,17 @@ class Author
 		email = emailList;
 	}
 	
-//	Author::string toString()
-// 	{
- //		return "Author[name = nameList, email = emailList, gender = gen]";
- //	}
-	
+	string Author::toString()
+ 	{
+		return (name) + (email) + (gender);
+	}
+/*	
 int main()
 {
-	Author data("Dan Brown", "1345dan@gmail.com", 'm');
+	Author data = {"Dan Brown\n", "1345dan@gmail.com\n", 'm'};
 	
+	cout<<data.toString();
 //	string
 		
 	return 0;
-}
+}*/
